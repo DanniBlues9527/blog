@@ -1,0 +1,61 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #323232;
+}
+.main-container {
+  width: 90%;
+  height: auto;
+  min-height: 100%;
+  margin: 50px 0;
+}
+.archive-list-area {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.archive-list {
+  width: 98%;
+  background-color: #fff;
+}
+.rightsider {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.rightsider-card {
+  width: 100%;
+  min-height: 500px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.rightsider-card-title {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.65);
+}
+.rightsider-card-content li {
+  height: 40px;
+  list-style: none;
+  line-height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+}
+.rightsider-card-content li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+.rightsider-card-content a {
+  color: rgba(0, 0, 0, 0.65);
+  text-decoration: none;
+}
+.rightsider-card-content span {
+  color: inherit;
+  float: right;
+}
