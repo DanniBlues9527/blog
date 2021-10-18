@@ -126,6 +126,7 @@ ol {
 .article-navigation-content li {
   margin-left: 20px;
   list-style-type: disc;
+  cursor: pointer;
 }
 
 .article-comment-box {

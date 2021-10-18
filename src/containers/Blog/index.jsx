@@ -1,11 +1,11 @@
 import { Route } from "react-router-dom";
-import BlogIndex from "../../components/Blog/BlogIndex";
-import Article from "../../components/Article/Article";
+import Index from "../../components/Blog/Index";
+import Article from "../../components/Article/Index";
 
 function Blog(props) {
   return (
     <div>
-      <Route exact path="/blog" component={BlogIndex} />
+      <Route exact path="/blog" component={Index} />
       <Route path="/blog/article/:number" component={Article} />
     </div>
   );

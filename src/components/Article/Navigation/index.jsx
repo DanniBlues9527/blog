@@ -68,7 +68,6 @@ function Navigation(props) {
   }
 
   const menuList = getMenuList(props.content);
-  console.log(menuList);
 
   return (
     <div className="rightsider">

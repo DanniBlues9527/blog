@@ -1,6 +1,6 @@
 import { HashRouter, Route } from "react-router-dom";
-import HomeHeader from "../../components/Home/HomeHeader";
-import HomeFooter from "../../components/Home/HomeFooter";
+import Header from "../../components/Home/Header";
+import Footer from "../../components/Home/Footer";
 import Home from "../Home";
 import Blog from "../Blog";
 import About from "../About";
@@ -10,13 +10,13 @@ function Index() {
     <>
       <HashRouter>
         <div>
-          <HomeHeader />
+          <Header />
           <div className="middle">
             <Route exact path="/" component={Home} />
             <Route path="/blog" component={Blog} />
             <Route path="/about" component={About} />
           </div>
-          <HomeFooter />
+          <Footer />
         </div>
       </HashRouter>
     </>

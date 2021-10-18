@@ -9,6 +9,6 @@ const allReducer = combineReducers({
 });
 
 export default createStore(
-  blogReducer,
+  allReducer,
   composeWithDevTools(applyMiddleware(thunk))
 );

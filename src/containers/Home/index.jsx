@@ -1,12 +1,11 @@
-import HomeBanner from '../../components/Home/HomeBanner';
-// import HomeCardArea from '../../components/Home/HomeCardArea';
+import Banner from "../../components/Home/Banner";
 
 function Home() {
-    return (
-        <>
-            <HomeBanner />
-        </>
-    );
+  return (
+    <>
+      <Banner />
+    </>
+  );
 }
 
 export default Home;

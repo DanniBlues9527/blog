@@ -1,7 +1,7 @@
 import React from "react";
-import ArticleItem from "../ArticleItem";
+import Item from "../Item";
 
-function ArticleList(props) {
+function List(props) {
   const articleList = [];
   const issues = props.issues;
   const currentPage = props.pageNumber;
@@ -14,7 +14,7 @@ function ArticleList(props) {
   for (let i = start; i < end; i++) {
     let item = issues[i];
     articleList.push(
-      <ArticleItem
+      <Item
         key={item.id}
         number={item.number}
         title={item.title}
@@ -27,4 +27,4 @@ function ArticleList(props) {
   return <div className="archive-list">{articleList}</div>;
 }
 
-export default ArticleList;
+export default List;

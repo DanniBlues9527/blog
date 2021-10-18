@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col } from "antd";
 import axios from "axios";
-import Content from "../Content/";
-import Navigation from "../Navigation/";
+import Content from "../Content";
+import Navigation from "../Navigation";
 import "./index.css";
 
-function Article(props) {
+function Index(props) {
   const [content, setContent] = useState(null);
   const [navigation, setNavigation] = useState(null);
+
+  const number = props.match.params.number;
+
   useEffect(() => {
-    let url = `https://api.github.com/repos/DanniBlues9527/article/issues/${props.match.params.number}`;
+    let url = `https://api.github.com/repos/DanniBlues9527/article/issues/${number}`;
     axios
       .get(url)
       .then((res) => {
@@ -26,6 +29,7 @@ function Article(props) {
       })
       .catch((e) => console.log(e));
   }, []);
+
   return (
     <div className="main">
       <div className="main-container">
@@ -42,4 +46,4 @@ function Article(props) {
   );
 }
 
-export default Article;
+export default Index;

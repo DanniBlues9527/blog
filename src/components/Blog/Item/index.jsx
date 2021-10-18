@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
-function ArticleItem(props) {
+function Item(props) {
   const time = props.time.split("T")[0];
   return (
     <div className="blog-article-item">
@@ -23,4 +23,4 @@ function ArticleItem(props) {
   );
 }
 
-export default ArticleItem;
+export default Item;
