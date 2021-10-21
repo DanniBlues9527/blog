@@ -40,15 +40,15 @@ function Navigation(props) {
       }
     }
     return menuObj.map((level2) => (
-      <li key={level2.id} onClick={() => anchor(level2.title)}>
+      <li key={level2.id} onClick={(e) => anchor(e, level2.title)}>
         {level2.title}
         <ul>
           {level2.children.map((level3) => (
-            <li key={level3.id} onClick={() => anchor(level3.title)}>
+            <li key={level3.id} onClick={(e) => anchor(e, level3.title)}>
               {level3.title}
               <ul>
                 {level3.children.map((level4) => (
-                  <li key={level4.id} onClick={() => anchor(level4.title)}>
+                  <li key={level4.id} onClick={(e) => anchor(e, level4.title)}>
                     {level4.title}
                   </li>
                 ))}
@@ -60,11 +60,12 @@ function Navigation(props) {
     ));
   }
 
-  function anchor(id) {
+  function anchor(event, id) {
     document.body.scroll(
       0,
-      document.getElementById(id.toLowerCase()).offsetTop
+      document.getElementById(escape(id.toLowerCase())).offsetTop
     );
+    event.stopPropagation();
   }
 
   const menuList = getMenuList(props.content);

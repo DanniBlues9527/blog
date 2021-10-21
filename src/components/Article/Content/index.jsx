@@ -9,6 +9,17 @@ function Content(props) {
     });
   }, []);
 
+  const renderer = {
+    heading(text, level) {
+      return `
+              <h${level} id="${escape(text.toLowerCase())}">
+                ${text}
+              </h${level}>`;
+    },
+  };
+
+  marked.use({ renderer });
+
   return (
     <div className="article-list-area">
       <div className="article-list">
